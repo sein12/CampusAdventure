@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <!-- 크기 변화 -->
+    <scale
+        android:duration="3000"
+        android:fromXScale="0.5"
+        android:fromYScale="0.5"
+        android:toXScale="2.0"
+        android:toYScale="2.0"
+        android:pivotX="50%"
+        android:pivotY="50%" />
+
+    <!-- 회전 -->
+    <rotate
+        android:duration="3000"
+        android:fromDegrees="0"
+        android:toDegrees="720"
+        android:pivotX="50%"
+        android:pivotY="50%" />
+
+    <!-- 투명도 변화 (투명 효과를 줄임) -->
+    <alpha
+        android:duration="3000"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.8" />
+
+    <!-- 이동 (살짝 떠오르는 느낌) -->
+    <translate
+        android:duration="3000"
+        android:fromYDelta="0%"
+        android:toYDelta="-10%" />
+</set>

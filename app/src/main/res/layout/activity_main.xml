@@ -1,0 +1,300 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_bck_img">
+    <FrameLayout
+        android:id="@+id/overlay_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <!-- 왼쪽 상단 프로필 -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:orientation="horizontal"
+            android:background="@drawable/profile_red">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/p1" />
+
+            <LinearLayout
+                android:id="@+id/Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Player1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player 1"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/Player1_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coins: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+                <TextView
+                    android:id="@+id/Player1_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stars: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/currentPlayerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="다음 차례: "
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="#ffffff"/>
+        <!-- 오른쪽 상단 프로필 -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:orientation="horizontal"
+            android:background="@drawable/profile_red">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/p2" />
+
+            <LinearLayout
+                android:id="@+id/Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Player2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player 2"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/Player2_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coins: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+                <TextView
+                    android:id="@+id/Player2_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stars: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <GridLayout
+            android:id="@+id/boardGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:alpha="0.8"
+            android:background="#444444"
+            android:columnCount="6"
+            android:padding="4dp"
+            android:rowCount="6">
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/middleInfoLayout"
+            android:layout_width="208dp"
+            android:layout_height="161dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <!-- 주사위 버튼 -->
+            <Button
+                android:id="@+id/rollDiceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6200EE"
+                android:text="Roll Dice"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/starImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/star"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- 하단 정보와 주사위 버튼 -->
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 왼쪽 하단 프로필 -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|end"
+            android:orientation="horizontal"
+            android:background="@drawable/profile_blue">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/p3" />
+
+            <LinearLayout
+                android:id="@+id/Player3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Player3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player 3"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/Player3_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coins: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+                <TextView
+                    android:id="@+id/Player3_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stars: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 오른쪽 하단 프로필 -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal"
+            android:background="@drawable/profile_blue">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/p4" />
+
+            <LinearLayout
+                android:id="@+id/Player4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Player4_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player 4"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/Player4_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coins: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+                <TextView
+                    android:id="@+id/Player4_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stars: "
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottomInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <!-- 현재 위치 -->
+            <TextView
+                android:id="@+id/currentPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Position: 정문[0]"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:background="#ffffff"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
